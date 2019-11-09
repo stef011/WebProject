@@ -17,7 +17,7 @@ class CreateIdeasTable extends Migration
             $table->bigIncrements('id');
             $table->string('name', 50);
             $table->string('description', 1024);
-            $table->integer('userId')->unsigned();
+            $table->unsignedBigInteger('userId');
             $table->timestamps();
         });
     }

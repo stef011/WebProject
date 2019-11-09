@@ -16,8 +16,12 @@ class CreateBasketLinesTable extends Migration
     {
         Schema::create('basket_lines', function (Blueprint $table) {
             $table->integer('userId')->unsigned();
-            $table->integer('productId')->unsigned();
-            $table->foreign('productId')->references('id')->on('products');
+            $table->unsignedBigInteger('productId');
+
+            $table->foreign('productId')
+                ->references('id')
+                ->on('products')
+                ->onDelete('cascade');
         });
     }
 

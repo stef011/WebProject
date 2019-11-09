@@ -14,11 +14,12 @@ class CreateVotesTable extends Migration
     public function up()
     {
         Schema::create('votes', function (Blueprint $table) {
-            $table->integer('userId')->unsigned();
-            $table->integer('ideaId')->unsigned();
+            $table->unsignedBigInteger('userId');
+            $table->unsignedBigInteger('ideaId');
             $table->boolean('up');                  /* Upvoted if set to true, else Downvoted */
 
-            $table->foreign('ideaId')->references('id')->on('ideas');
+            $table->foreign('ideaId')->references('id')->on('ideas')
+                ->onDelete('cascade');
         });
     }
 

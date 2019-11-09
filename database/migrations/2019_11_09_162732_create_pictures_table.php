@@ -16,11 +16,12 @@ class CreatePicturesTable extends Migration
         Schema::create('pictures', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('image', 100);
-            $table->integer('userId')->unsigned();
-            $table->integer('eventId')->unsigned();
+            $table->unsignedBigInteger('userId');
+            $table->unsignedBigInteger('eventId');
             $table->timestamps();
 
-            $table->foreign('eventId')->references('id')->on('events');
+            $table->foreign('eventId')->references('id')->on('events')
+                ->onDelete('cascade');
         });
     }
 

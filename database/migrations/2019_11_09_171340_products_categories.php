@@ -14,11 +14,13 @@ class ProductsCategories extends Migration
     public function up()
     {
         Schema::create('products_categories', function (Blueprint $table) {
-            $table->integer('productId')->unsigned();
-            $table->integer('categoryId')->unsigned();
+            $table->unsignedBigInteger('productId');
+            $table->unsignedBigInteger('categoryId');
 
-            $table->foreign('productId')->references('id')->on('products');
-            $table->foreign('categoryId')->references('id')->on('categories');
+            $table->foreign('productId')->references('id')->on('products')
+                ->onDelete('cascade');
+            $table->foreign('categoryId')->references('id')->on('categories')
+                ->onDelete('cascade');
         });
     }
 
