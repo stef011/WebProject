@@ -21,8 +21,8 @@ class CreateEventsTable extends Migration
             $table->string('description', 1024);
             $table->boolean('recurrent');
             $table->float('price');
-            $table->integer('illustration');
-            $table->timestamp('scheduled');
+            $table->string('illustration', 100);
+            $table->timestamp('scheduled')->nullable();
         });
     }
 
