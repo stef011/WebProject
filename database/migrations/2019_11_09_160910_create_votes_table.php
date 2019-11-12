@@ -15,10 +15,13 @@ class CreateVotesTable extends Migration
     {
         Schema::create('votes', function (Blueprint $table) {
             $table->unsignedBigInteger('id');
-            $table->unsignedBigInteger('ideaId');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('idea_id');
             $table->boolean('up');                  /* Upvoted if set to true, else Downvoted */
 
-            $table->foreign('ideaId')->references('id')->on('ideas')
+            $table->unique(['user_id', 'idea_id']);
+
+            $table->foreign('idea_id')->references('id')->on('ideas')
                 ->onDelete('cascade');
         });
     }
