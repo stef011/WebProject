@@ -23,6 +23,7 @@ class CreateEventsTable extends Migration
             $table->float('price');
             $table->string('illustration', 100);
             $table->timestamp('scheduled')->nullable();
+            $table->timestamps();
         });
     }
 
