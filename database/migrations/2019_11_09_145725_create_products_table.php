@@ -21,6 +21,22 @@ class CreateProductsTable extends Migration
             $table->float('price');
             $table->integer('stock');
         });
+
+
+        //category_product
+        Schema::create('category_product', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('product_id');
+            $table->unsignedBigInteger('category_id');
+            $table->string('name', 50);
+
+            $table->unique(['category_id', 'product_id']);
+
+            $table->foreign('category_id')->references('id')->on('categories')
+                ->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')
+                ->onDelete('cascade');
+        });
     }
 
     /**
@@ -30,6 +46,12 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
+        Schema::table('category_product', function (Blueprint $table) {
+            $table->dropForeign('category_id');
+            $table->dropForeign('product_id');
+        });
+
+        Schema::dropIfExists('category_product');
         Schema::dropIfExists('products');
     }
 }
