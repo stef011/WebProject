@@ -17,6 +17,8 @@ Route::get('/', 'HomePageController@index');
 Route::get('/events', 'EventController@index');
 Route::get('/events/{id}', 'EventController@show');
 
+Route::get('/album/{id}', 'PictureController@album');
+
 Route::get('/legal', 'LegalController@index');
 
 Route::resource('products', 'ProductController');
