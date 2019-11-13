@@ -21,7 +21,7 @@
 
     {{-- JavaScript --}}
 
-    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap/bootstrap.js"></script>
     @yield('js')
 
 </head>

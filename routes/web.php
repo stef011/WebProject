@@ -19,9 +19,10 @@ Route::get('/events/{id}', 'EventController@show');
 
 Route::get('/album/{id}', 'PictureController@album');
 
-Route::get('/legal', 'LegalController@index');
+Route::get('/products', 'ProductController@index');
+Route::get('/products/{id}', 'ProductController@show');
 
-Route::resource('products', 'ProductController');
+Route::get('/legal', 'LegalController@index');
 
 Route::get('test', 'TestController@test');
 
