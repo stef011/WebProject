@@ -12,9 +12,11 @@
     <title>Site du BDE de Strasbourg</title>
 
     {{-- CSS --}}
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="/css/fontawesome/all.css">
+    <link rel="stylesheet" href="/css/welcome.css">
     @yield('css')
 
     {{-- JavaScript --}}
@@ -60,9 +62,6 @@
     </header>
 
     <body>
-        <div>
-            body
-</div>
     @yield('body')
     </body>
 
