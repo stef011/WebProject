@@ -8,6 +8,6 @@ class LegalController extends Controller
 {
     public function index()
     {
-        return view('legal')
+        return view('legal');
     }
 }
