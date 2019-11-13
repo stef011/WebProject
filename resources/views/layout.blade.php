@@ -12,9 +12,11 @@
     <title>Site du BDE de Strasbourg</title>
 
     {{-- CSS --}}
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="/css/fontawesome/all.css">
+    <link rel="stylesheet" href="/css/welcome.css">
     @yield('css')
 
     {{-- JavaScript --}}
@@ -54,6 +56,34 @@
         </div>
     </nav>       
   </header>
+          <div class="navbar-collapse collapse justify-content-center" id="collapsingNavbar">
+              <ul class="navbar-nav items">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Acceuil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Evénements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Boutique</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Idées</a>
+                </li>              
+              </ul> 
+          </div>
+          <div>
+            <button type="button" class="btn btn-light connexion mt-1  text-right">Connexion</button>
+          </div>
+      </nav>
+
+
+      
+    </header>
+
+    <body>
+    @yield('body')
+    </body>
 
   <main>
     <div>
