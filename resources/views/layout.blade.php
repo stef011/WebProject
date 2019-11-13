@@ -14,6 +14,7 @@
     {{-- CSS --}}
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
     @yield('css')
 
     {{-- JavaScript --}}
@@ -23,19 +24,39 @@
 
 </head>
 
-    <header style="background-color:#000000; color:white; padding-top:20px;">
-    <div class="container-fluid text-center text-md-left">
-    <div class="row">
-    <div class="col-md-2 ">
-    <h1>BDE CESI Strasbourg</h1>
-</div>
-<div class="col-md-2 ">
-</div>
-<div class="col-md-6 ">
-    <h2>Acceuil Evénements Boutique Boîte à idées</h2> 
-</div>
-</div>
-</div>
+
+    <header>
+
+      <nav class="navbar navbar-expand-md navbar-dark noir">
+        <div class="d-flex">
+          <a class="navbar-brand mr-1" href="#">BDE Strasbourg</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+          <div class="navbar-collapse collapse justify-content-center" id="collapsingNavbar">
+              <ul class="navbar-nav items">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Acceuil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Evénements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Boutique</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Idées</a>
+                </li>              
+              </ul> 
+          </div>
+          <div>
+            <button type="button" class="btn btn-light connexion mt-1  text-right">Connexion</button>
+          </div>
+      </nav>
+
+
+      
     </header>
 
     <body>
