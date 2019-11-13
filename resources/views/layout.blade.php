@@ -9,7 +9,7 @@
     
     @yield('meta')
 
-    <title>Site du BDE de Strasbourg</title>
+    <title>@yield('title') - Site du BDE de Strasbourg</title>
 
     {{-- CSS --}}
 
@@ -21,7 +21,7 @@
 
     {{-- JavaScript --}}
 
-    <script src="js/bootstrap.js"></script>
+    <script src="/js/bootstrap.js"></script>
     @yield('js')
 
 </head>
@@ -56,6 +56,7 @@
         </div>
     </nav>       
   </header>
+       
 
   <main>
     <div>
