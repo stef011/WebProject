@@ -26,7 +26,7 @@
 
 </head>
 
-<body>
+<body class="d-flex flex-column">
   <header>
     <nav class="navbar navbar-expand-md navbar-dark noir">
       <div class="d-flex">
@@ -38,16 +38,16 @@
         <div class="navbar-collapse collapse justify-content-center" id="collapsibleNavbar">
             <ul class="navbar-nav items">
               <li class="nav-item active">
-                  <a class="nav-link" href="#">Acceuil</a>
+                  <a class="nav-link" href="/">Acceuil</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#">Evénements</a>
+                  <a class="nav-link" href="/events">Evénements</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#">Boutique</a>
+                  <a class="nav-link" href="/shop">Boutique</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#">Idées</a>
+                  <a class="nav-link" href="/ideas">Idées</a>
               </li>              
             </ul> 
         </div>
@@ -58,13 +58,12 @@
   </header>
        
 
-  <main>
-    <div>
-      @yield('body')
-    </div>
+  <main id="page-content" >
+    @yield('body')
   </main>
+ 
 
-  <footer class="foot">
+  <footer id="sticky-footer" class="py-4 text-white-50">
 
     <div class="container-fluid text-center text-md-left">
 
