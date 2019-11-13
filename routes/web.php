@@ -11,6 +11,25 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layout');
+
+Route::get('/', 'HomePageController@index');
+
+Route::get('/events', 'EventController@index');
+Route::get('/events/{id}', 'EventController@show');
+
+Route::get('/album/{id}', 'PictureController@album');
+
+Route::get('/legal', 'LegalController@index');
+
+Route::resource('products', 'ProductController');
+
+Route::get('test', 'TestController@test');
+
+
+
+//Auth routes
+Route::get('/login', 'Auth.LoginController@authenticate');
+Route::get('/register', 'Auth.RegisterController@register');
+Route::get('/logout', function () {
+    Auth::logout();
 });
