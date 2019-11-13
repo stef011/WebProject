@@ -1,3 +1,9 @@
 .noir {
     background-color: black;
 }
+
+.foot {
+    background-color: #000000;
+    color: white;
+    padding-top: 20px;
+}

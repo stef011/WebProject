@@ -64,7 +64,7 @@
     </div>
   </main>
 
-  <footer style="background-color:#000000; color:white; padding-top:20px;">
+  <footer class="foot">
 
     <div class="container-fluid text-center text-md-left">
 
