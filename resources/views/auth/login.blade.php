@@ -21,7 +21,7 @@ Connexion BDE Strasbourg
     <div class="col-sm-4 text-center">
         <div class="container">
             <div class="row card text-white bg-dark">
-                <h4 class="card-header">Connectez vous à vôtre espace personnel</h4>
+                <h4 class="card-header">Connectez vous à votre espace personnel</h4>
                 <div class="card-body">
                     <form action="{{ url('login') }}" method="POST">
                         @csrf

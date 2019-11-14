@@ -76,7 +76,7 @@
 
 
           <h5 class="text-uppercase font-weight-bold">Quelques rappels</h5>
-          <p>Ce site est à la disposition de tous les élèves du CESI, du corps enseignant ainsi que du personnel administratif. Il est impératif que chacun soit respecté et se sente bienvenu sur cette platforme. Tout écart sera sanctionné (de la supression du poste au conseil de dicipline) </p>
+          <p>Ce site est à la disposition de tous les élèves du CESI, du corps enseignant ainsi que du personnel administratif. Il est impératif que chacun soit respecté et se sente bienvenu sur cette platforme. Tout écart sera sanctionné (de la supression du poste au conseil de discipline) </p>
 
         </div>
         <div class="col-md-1 ">
