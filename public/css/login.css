@@ -1,0 +1,16 @@
+.component {
+    min-height: 250px;
+    min-width: 300px;
+    background: #000000 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 54px;
+    opacity: 1;
+}
+
+.buttonform {
+    max-width: 120px;
+    background: #B6B7B7 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 27px;
+    opacity: 1;
+}
