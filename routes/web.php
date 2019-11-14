@@ -23,6 +23,8 @@ Route::get('/legal', 'LegalController@index');
 
 Route::resource('products', 'ProductController');
 
+Route::get('products', 'ProductsController@index');
+
 Route::get('test', 'TestController@test');
 
 
