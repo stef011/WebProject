@@ -14,4 +14,12 @@ class Product extends Model
     {
         return $this->belongsTo(BasketLine::class, 'productId');
     }
+
+    public function scopeSearch($query, $q)
+    {
+        if ($q == null) return $query;
+        return $query
+                ->where('title', 'LIKE', "%{$q}%")
+                ->orWhere('description', 'LIKE', "%{$q}%");
+    }
 }
