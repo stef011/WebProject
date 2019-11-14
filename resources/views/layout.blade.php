@@ -31,23 +31,23 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-dark noir">
       <div class="d-flex">
-        <a class="navbar-brand mr-1" href="#">BDE Strasbourg</a>
+        <a class="navbar-brand mr-1" href="/">BDE Strasbourg</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
       <div class="navbar-collapse collapse justify-content-center" id="collapsibleNavbar">
         <ul class="navbar-nav items">
-          <li class="nav-item active">
+          <li class="nav-item {{ Request::is('/')? 'active' : ''}}">
             <a class="nav-link" href="/">Acceuil</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {{ Request::is('events*')? 'active' : ''}}">
             <a class="nav-link" href="/events">Evénements</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {{ Request::is('shop*')? 'active' : ''}}">
             <a class="nav-link" href="/shop">Boutique</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {{ Request::is('ideas*')? 'active' : ''}}">
             <a class="nav-link" href="/ideas">Idées</a>
           </li>
         </ul>
