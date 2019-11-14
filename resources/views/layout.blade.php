@@ -14,11 +14,12 @@
 
   {{-- CSS --}}
 
+  @yield('css')
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="/css/fontawesome/all.css">
 
-  @yield('css')
+
 
   {{-- JavaScript --}}
 
