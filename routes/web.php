@@ -28,7 +28,7 @@ Route::get('/products/{id}', 'ProductController@show');
 Route::get('/ideas', 'IdeaController@index');
 Route::get('/ideas/{id}', 'IdeaController@show');
 
-Route::get('/legal', 'LegalController@index');
+Route::get('/legal', 'LegalController@index')->name('legalroute');
 
 Route::get('products', 'ProductController@index')->name('product.index');
 
@@ -39,8 +39,12 @@ Route::get('test', 'TestController@test');
 //Auth routes
 Route::get('/login', 'Auth.LoginController@authenticate');
 Route::get('/register', 'Auth.RegisterController@register');
-Route::get('/login', function () {return view ('auth/login');});
-Route::get('/register', function () {return view ('auth/register');});
+Route::get('/login', function () {
+    return view('auth/login');
+});
+Route::get('/register', function () {
+    return view('auth/register');
+});
 Route::get('/logout', function () {
     Auth::logout();
 });

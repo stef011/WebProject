@@ -13,11 +13,11 @@
   <title>@yield('title') - Site du BDE de Strasbourg</title>
 
   {{-- CSS --}}
-  <link rel="stylesheet" href="/css/login.css">
+
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="/css/fontawesome/all.css">
-  <link rel="stylesheet" href="/css/welcome.css">
+
   @yield('css')
 
   {{-- JavaScript --}}
@@ -53,7 +53,7 @@
         </ul>
       </div>
       <div>
-        <button type="button" class="btn btn-light connexion mt-1  text-right">Connexion</button>
+        <a href="/login" class="btn btn-light connexion mt-1 text-right" role="button" aria-pressed="true">Connexion</a>
       </div>
     </nav>
   </header>
@@ -87,7 +87,7 @@
 
           <h5 class="text-uppercase font-weight-bold">Liens utiles</h5>
           <li>
-            <a href="#!">Mentions légales</a>
+            <a href="{{route('legalroute')}}">Mentions légales</a>
           </li>
           <li>
             <a href="#!">Nous contacter</a>
