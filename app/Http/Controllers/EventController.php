@@ -11,7 +11,7 @@ class EventController extends Controller
     public function index()
     {
         $numPerPage = request('perPage', 5);
-        $events = Event::paginate($numPerPage);
+        $events = Event::latest()->paginate($numPerPage);
 
         return view('event.index', ['events' => $events]);
     }

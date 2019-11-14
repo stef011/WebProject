@@ -10,7 +10,7 @@ class Idea extends Model
 
     public function votes()
     {
-        return $this->hasMany(Vote::class, 'ideaId');
+        return $this->hasMany(Vote::class);
     }
 
     public function upVotes()

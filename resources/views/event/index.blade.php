@@ -24,7 +24,7 @@
         
         <form method="GET" action="{{ url()->current() }}" >
             <select name="perPage" onchange="if (this.value != 0){this.form.submit();}">
-                    <option value="0">Nombre d'articles par page</option>
+                    <option value="0">Nombre d'événements par page</option>
                     <option value="5">5</option>
                     <option value="10">10</option>
                     <option value="15">15</option>

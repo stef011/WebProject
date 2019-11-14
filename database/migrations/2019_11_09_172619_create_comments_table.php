@@ -33,7 +33,7 @@ class CreateCommentsTable extends Migration
      */
     public function down()
     {
-        Schema::table('commentt', function (Blueprint $table) {
+        Schema::table('comments', function (Blueprint $table) {
             $table->dropForeign('pictureId');
         });
         Schema::dropIfExists('comments');
