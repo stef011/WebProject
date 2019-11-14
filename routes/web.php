@@ -11,6 +11,7 @@
 |
 */
 
+use App\Http\Controllers\PictureController;
 
 Route::get('/', 'HomePageController@index');
 
@@ -18,6 +19,8 @@ Route::get('/events', 'EventController@index');
 Route::get('/events/{id}', 'EventController@show');
 
 Route::get('/album/{id}', 'PictureController@album');
+Route::get('img-test', 'PictureController@test');
+Route::post('save', 'PictureController@create');
 
 Route::get('/products', 'ProductController@index');
 Route::get('/products/{id}', 'ProductController@show');
@@ -27,7 +30,7 @@ Route::get('/ideas/{id}', 'IdeaController@show');
 
 Route::get('/legal', 'LegalController@index');
 
-Route::get('products', 'ProductsController@index');
+Route::get('products', 'ProductController@index')->name('product.index');
 
 Route::get('test', 'TestController@test');
 

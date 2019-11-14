@@ -2,10 +2,8 @@
 
 @section('body')
 
-
     <div class="container">
         <div class="row">
-        @foreach($products as $product)
             <div class="col">
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="..." alt="Card image cap">
@@ -16,11 +14,7 @@
                     </div>
                 </div>
             </div>
-            @endforeach
         </div>
     </div>
-
-
-
 
 @endsection
