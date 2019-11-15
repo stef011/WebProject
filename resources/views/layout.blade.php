@@ -45,7 +45,7 @@
           <li class="nav-item {{ Request::is('events*')? 'active' : ''}}">
             <a class="nav-link" href="/events">Evénements</a>
           </li>
-          <li class="nav-item {{ Request::is('shop*')? 'active' : ''}}">
+          <li class="nav-item {{ Request::is('products*')? 'active' : ''}}">
             <a class="nav-link" href="/shop">Boutique</a>
           </li>
           <li class="nav-item {{ Request::is('ideas*')? 'active' : ''}}">
