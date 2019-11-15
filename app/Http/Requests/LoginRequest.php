@@ -24,9 +24,8 @@ class LoginRequest extends FormRequest
     public function rules()
     {
         return [
-            'nom' => 'bail|required|between:5,20|alpha',
-            'email' => 'bail|required|email',
-            'message' => 'bail|required|max:250'
+            'emailc' => 'email|required',
+            'mdpc' => 'required'
         ];
     }
 }

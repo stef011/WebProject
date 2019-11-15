@@ -69,16 +69,16 @@ Route::post('admin/products/save', 'AdminController@productSave');
 
 
 //Auth routes
-Route::get('/login', 'Auth.LoginController@authenticate');
-Route::get('/register', 'Auth.RegisterController@register');
+Route::post('login', 'LoginController@store');
+Route::get('login', 'LoginController@create');
+Route::post('register', 'RegisterController@store');
+Route::get('register', 'RegisterController@create');
 Route::get('/login', function () {
     return view('auth/login');
-});
+})->name('loginroute');
 Route::get('/register', function () {
     return view('auth/register');
-});
+})->name('registerroute');
 Route::get('/logout', function () {
     Auth::logout();
 });
-Route::get('contact', 'RegisterController@create');
-Route::post('contact', 'RegisterController@store');
