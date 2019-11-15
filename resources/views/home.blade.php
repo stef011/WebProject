@@ -1,5 +1,14 @@
 @extends ('layout')
 
+@section ('title')
+Acceuil BDE Strasbourg
+@endsection
+
+@section('css')
+<link rel="stylesheet" href="/css/welcome.css">
+@endsection
+
+
 @section ('body')
 
 <div class="container-fluid window">

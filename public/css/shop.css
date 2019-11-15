@@ -1,0 +1,17 @@
+.card{
+    min-height: 400px;
+    max-height: 400px;
+    min-width: 350px;
+    max-width: 350px;
+    margin-bottom: 15%;
+    margin-top: 15%;
+}
+
+.smoke {
+    background-color: #F7F7F7;
+}
+
+.sorting{
+    height: 60px;
+    background-color: #F7F7F7;
+}

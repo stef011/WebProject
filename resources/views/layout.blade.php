@@ -12,12 +12,13 @@
   <title>@yield('title') - Site du BDE de Strasbourg</title>
 
   {{-- CSS --}}
-  <link rel="stylesheet" href="/css/login.css">
+
+  @yield('css')
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="/css/fontawesome/all.css">
-  <link rel="stylesheet" href="/css/welcome.css">
-  @yield('css')
+
+
 
   {{-- JavaScript --}}
 
@@ -43,7 +44,7 @@
           <li class="nav-item {{ Request::is('events*')? 'active' : ''}}">
             <a class="nav-link" href="/events">Evénements</a>
           </li>
-          <li class="nav-item {{ Request::is('shop*')? 'active' : ''}}">
+          <li class="nav-item {{ Request::is('products*')? 'active' : ''}}">
             <a class="nav-link" href="/shop">Boutique</a>
           </li>
           <li class="nav-item {{ Request::is('ideas*')? 'active' : ''}}">
@@ -52,7 +53,7 @@
         </ul>
       </div>
       <div>
-        <button type="button" class="btn btn-light connexion mt-1  text-right">Connexion</button>
+        <a href="/login" class="btn btn-light connexion mt-1 text-right" role="button" aria-pressed="true">Connexion</a>
       </div>
     </nav>
   </header>
@@ -75,7 +76,7 @@
 
 
           <h5 class="text-uppercase font-weight-bold">Quelques rappels</h5>
-          <p>Ce site est à la disposition de tous les élèves du CESI, du corps enseignant ainsi que du personnel administratif. Il est impératif que chacun soit respecté et se sente bienvenu sur cette platforme. Tout écart sera sanctionné (de la supression du poste au conseil de dicipline) </p>
+          <p>Ce site est à la disposition de tous les élèves du CESI, du corps enseignant ainsi que du personnel administratif. Il est impératif que chacun soit respecté et se sente bienvenu sur cette platforme. Tout écart sera sanctionné (de la supression du poste au conseil de discipline) </p>
 
         </div>
         <div class="col-md-1 ">
