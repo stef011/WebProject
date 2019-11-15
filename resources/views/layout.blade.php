@@ -92,7 +92,7 @@
           <h5 class="text-uppercase font-weight-bold">Liens utiles</h5>
           <ul>
             <li>
-              <a href="legalroute" class="text-secondary">Mentions légales</a>
+              <a href="legal" class="text-secondary">Mentions légales</a>
             </li>
             <li>
               <a href="#!" class="text-secondary">Nous contacter</a>

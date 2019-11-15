@@ -29,7 +29,7 @@ Route::get('/products/{id}', 'ProductController@show');
 Route::get('/ideas', 'IdeaController@index');
 Route::get('/ideas/{id}', 'IdeaController@show');
 
-Route::get('/legal', 'LegalController@index')->name('legalroute');
+Route::get('/legal', 'LegalController@index')->name('legal');
 
 Route::get('products', 'ProductController@index')->name('product.index');
 
