@@ -55,6 +55,9 @@
                 </ul>
             </div>
             <div>
+                <a href="/admin" class="btn btn-light connexion mt-1 text-right" role="button" aria-pressed="true">Admin</a>
+            </div>
+            <div>
                 <a href="/login" class="btn btn-light connexion mt-1 text-right" role="button" aria-pressed="true">Connexion</a>
             </div>
         </nav>
