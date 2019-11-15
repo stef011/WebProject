@@ -10,7 +10,7 @@ $factory->define(Event::class, function (Faker $faker) {
         'title' => $faker->sentence,
         'description' => $faker->text,
         'recurrent' => $faker->boolean(50),
-        'price' =>  0,
+        'price' =>  $faker->randomFloat(2, 0, 30),
         'illustration' => 'iamapicture'
     ];
 });

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
 
@@ -9,25 +9,25 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Bienvenue sur le site du BDE CESI strasbourg, le nouveau réseau social spécifique aux enseignants et aux élèves du CESI !" />
 
-  @yield('meta')
-
   <title>@yield('title') - Site du BDE de Strasbourg</title>
 
-  {{-- CSS --}}
-
-  @yield('css')
+  {{-- CSS --}} @yield('css')
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
-  <link rel="stylesheet" href="/css/fontawesome/all.css">
-
-
-
-  {{-- JavaScript --}}
+  <link rel="stylesheet" href="/css/fontawesome/all.css"> {{-- JavaScript --}}
 
   <script src="/js/bootstrap/bootstrap.js"></script>
   @yield('js')
 
 </head>
+
+<div class="acceptCookies" id="acceptCookies">
+  <div class="container d-flex align-content-center flex-column">
+    <p> <br> En continuant votre navigation sur ce site, vous acceptez l'utilisation des cookies.</p>
+    <button onclick="doCookie()" class="btn btn-danger"><i class="fas fa-cookie-bite"></i> Accepter les
+      cookies</button>
+  </div>
+</div>
 
 <body class="d-flex flex-column">
   <header>
@@ -46,7 +46,7 @@
           <li class="nav-item {{ Request::is('events*')? 'active' : ''}}">
             <a class="nav-link" href="/events">Evénements</a>
           </li>
-          <li class="nav-item {{ Request::is('shop*')? 'active' : ''}}">
+          <li class="nav-item {{ Request::is('products*')? 'active' : ''}}">
             <a class="nav-link" href="/shop">Boutique</a>
           </li>
           <li class="nav-item {{ Request::is('ideas*')? 'active' : ''}}">
@@ -78,7 +78,9 @@
 
 
           <h5 class="text-uppercase font-weight-bold">Quelques rappels</h5>
-          <p>Ce site est à la disposition de tous les élèves du CESI, du corps enseignant ainsi que du personnel administratif. Il est impératif que chacun soit respecté et se sente bienvenu sur cette platforme. Tout écart sera sanctionné (de la supression du poste au conseil de discipline) </p>
+          <p>Ce site est à la disposition de tous les élèves du CESI, du corps enseignant ainsi que du personnel administratif. Il est impératif que chacun soit respecté et se sente bienvenu sur cette platforme. Tout écart sera sanctionné (de la
+            supression du poste au conseil de discipline)
+          </p>
 
         </div>
         <div class="col-md-1 ">
@@ -88,12 +90,15 @@
 
 
           <h5 class="text-uppercase font-weight-bold">Liens utiles</h5>
-          <li>
-            <a href="{{route('legalroute')}}">Mentions légales</a>
-          </li>
-          <li>
-            <a href="#!">Nous contacter</a>
-          </li>
+          <ul>
+            <li>
+              <a href="#!" class="text-secondary">Mentions légales</a>
+            </li>
+            <li>
+              <a href="#!" class="text-secondary">Nous contacter</a>
+            </li>
+
+          </ul>
         </div>
         <div class="col-md-2 ">
           <i class="fab fa-facebook fa-3x"></i>
@@ -110,9 +115,22 @@
     </div>
 
   </footer>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script>
+    function doCookie() {
+      document.cookie = "AcceptCookies = AcceptCookies;";
+      document.getElementById("acceptCookies").style.display = 'none';
+    }
+
+    if (document.cookie.match("AcceptCookies")) {
+      document.getElementById("acceptCookies").style.display = 'none';
+    }
+  </script>
 </body>
 
 </html>
