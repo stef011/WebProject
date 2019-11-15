@@ -10,7 +10,16 @@ Acceuil BDE Strasbourg
 
 
 @section ('body')
-
+@if(session()->has('info'))
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <div class="container text-center">
+            <strong>Vous ne pouvez accedez au panel admin</strong> {{ session('info') }}    
+        </div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>                
+@endif
 <div class="container-fluid window">
     <div class="row wlcmess">
         <div class="col-md-4">

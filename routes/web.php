@@ -38,49 +38,38 @@ Route::get('products', 'ProductController@index')->name('product.index');
 Route::get('test', 'TestController@test');
 
 
-Route::get('admin', 'AdminController@index');
+Route::get('admin', 'AdminController@index')->middleware('admin');
+
+
+Route::get('admin/events', 'AdminController@showEvents')->name('admin.events')->middleware('admin');
+
+Route::get('admin/events/{eventId}/delete', ['as' => 'delete', 'uses' => 'AdminController@eventDelete'])->middleware('admin');
+
+Route::get('admin/events/{evendId}/modify', ['as' => 'modify', 'uses' => 'AdminController@eventModify'])->middleware('admin');
+
+Route::post('admin/events/{eventId}/update', ['as' => 'update', 'uses' => 'AdminController@eventUpdate'])->middleware('admin');
+
+Route::get('admin/events/create', 'AdminController@eventCreate')->middleware('admin');
+
+Route::post('admin/events/save', 'AdminController@eventSave')->middleware('admin');
 
 
 
-Route::get('admin/events', 'AdminController@showEvents')->name('admin.events');
+Route::get('admin/products', 'AdminController@showProducts')->name('admin.products')->middleware('admin');
 
-Route::get('admin/events/{eventId}/delete', ['as' => 'delete', 'uses' => 'AdminController@eventDelete']);
+Route::get('admin/products/{productId}/delete', ['as' => 'delete', 'uses' => 'AdminController@productDelete'])->middleware('admin');
 
-Route::get('admin/events/{evendId}/modify', ['as' => 'modify', 'uses' => 'AdminController@eventModify']);
+Route::get('admin/products/{productId}/modify', ['as' => 'modify', 'uses' => 'AdminController@productModify'])->middleware('admin');
 
-Route::post('admin/events/{eventId}/update', ['as' => 'update', 'uses' => 'AdminController@eventUpdate']);
+Route::post('admin/products/{productId}/update', ['as' => 'modify', 'uses' => 'AdminController@productUpdate'])->middleware('admin');
 
-Route::get('admin/events/create', 'AdminController@eventCreate');
+Route::get('admin/products/create', 'AdminController@productCreate')->middleware('admin');
 
-Route::post('admin/events/save', 'AdminController@eventSave');
-
-
-
-Route::get('admin/products', 'AdminController@showProducts')->name('admin.products');
-
-Route::get('admin/products/{productId}/delete', ['as' => 'delete', 'uses' => 'AdminController@productDelete']);
-
-Route::get('admin/products/{productId}/modify', ['as' => 'modify', 'uses' => 'AdminController@productModify']);
-
-Route::post('admin/products/{productId}/update', ['as' => 'modify', 'uses' => 'AdminController@productUpdate']);
-
-Route::get('admin/products/create', 'AdminController@productCreate');
-
-Route::post('admin/products/save', 'AdminController@productSave');
+Route::post('admin/products/save', 'AdminController@productSave')->middleware('admin');
 
 
 
-//Auth routes
-Route::post('login', 'LoginController@store');
-Route::get('login', 'LoginController@create');
-Route::post('register', 'RegisterController@store');
-Route::get('register', 'RegisterController@create');
-Route::get('/login', function () {
-    return view('auth/login');
-})->name('login');
-Route::get('/register', function () {
-    return view('auth/register');
-})->name('register');
-Route::get('/logout', function () {
-    Auth::logout();
-});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

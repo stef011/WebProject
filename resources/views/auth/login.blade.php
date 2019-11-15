@@ -15,6 +15,16 @@ Connexion BDE Strasbourg
 
 @section ('body')
 
+@if(session()->has('info'))
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <div class="container text-center">
+            <strong>Vous ne pouvez accedez au panel admin</strong> {{ session('info') }}    
+        </div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>                
+@endif
 <br>
 <div class="row">
     <div class="col-sm-4"></div>
@@ -23,17 +33,17 @@ Connexion BDE Strasbourg
             <div class="row card text-white bg-dark">
                 <h4 class="card-header">Connectez vous à votre espace personnel</h4>
                 <div class="card-body">
-                    <form action="{{ url('login') }}" method="POST">
+                    <form action="{{ route('login') }}" method="POST">
                         @csrf
                         <div class="form-group">
-                            <input type="email" class="form-control  @error('emailc') is-invalid @enderror" name="emailc" id="emailc" placeholder="E-mail (votre E-mail du CESI)" value="{{ old('emailc') }}">
-                            @error('emailc')
+                            <input type="email" class="form-control  @error('email') is-invalid @enderror" name="email" id="email" placeholder="E-mail (votre E-mail du CESI)" value="{{ old('email') }}">
+                            @error('email')
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <input class="form-control  @error('mdpc') is-invalid @enderror" name="mdpc" id="mdpc" placeholder="Mot de passe">{{ old('mdpc') }}</input>
-                            @error('mdpc')
+                            <input class="form-control  @error('password') is-invalid @enderror" name="password" id="password" placeholder="Mot de passe" type="password">{{ old('password') }}</input>
+                            @error('password')
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
