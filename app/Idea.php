@@ -30,4 +30,15 @@ class Idea extends Model
     {
         return $this->downVotes()->count();
     }
+
+
+
+    public function upVote($user)
+    {
+        Vote::upVote($user, $this);
+    }
+    public function downVote($user)
+    {
+        Vote::downVote($user, $this);
+    }
 }

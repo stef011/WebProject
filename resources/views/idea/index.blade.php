@@ -4,20 +4,11 @@
     Idées
 @endsection
 
+@section('css')
+    <link rel="stylesheet" href="/css/event.css">
+@endsection
+
 @section('body')
-
-    @foreach ($ideas as $idea)
-        <li>
-            <h3>{{ $idea->name }}</h3>
-            <p>{{$idea->description }}</p>
-            <p class="alert-success">{{ $idea->upVotesNumber() }}</p>
-            <p class="alert-danger">{{ $idea->downVotesNumber() }}</p>
-        </li>
-
-
-    @endforeach
-
-
     <div class="container">
                 <div class="row">
                 @foreach ($ideas as $idea)
@@ -26,10 +17,9 @@
                             <a href="events/{{ $idea->id }}" class="card-title stretched-link"><h3>{{ $idea->title }}</h3></a>
                             <p class="h-25 card-text mb-1 text-wrap overflow-hidden">{{ $idea->description }}</p>
                             <p class="text-muted"><small>{{ $idea->created_at }}</small></p>
-                            <p class="text-danger align-self-center" > {{ $idea->recurrent == true ? 'Annuel': 'Ponctuel' }}</p>
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-success mb-1">UpVote <i class="fas fa-chevron-circle-up"> {{ $idea->upVotesNumber() }}</i></button>
+                            <a href=""class="btn btn-success text-white">UpVote <i class="fas fa-chevron-circle-up"> {{ $idea->upVotesNumber() }}</i></a>
                             <a href="" class="btn btn-danger">DownVote <i class="fas fa-chevron-circle-down"> {{ $idea->downVotesNumber() }}</i></a>
                         </div>
                     </div>

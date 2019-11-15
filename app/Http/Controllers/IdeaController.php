@@ -17,4 +17,13 @@ class IdeaController extends Controller
 
         return view('idea.index', ['ideas' => $ideas]);
     }
+
+    public function upVote()
+    {
+        Vote::upVote($this->id, Auth::id());
+    }
+    public function downVote()
+    {
+        Vote::downVote($this->id, Auth::id);
+    }
 }

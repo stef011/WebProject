@@ -15,9 +15,9 @@
                 <div class="row">
                 @foreach ($events as $event)
                     <div class="card d-inline-block">
-                        <img src="{{ $event->illustration }}" alt="Image" class="card-img-top" aria-placeholder="Photo de l'événement">
+                        <img src="{{ asset('storage/images/' . $event->illustration) }}" alt="Image" class="card-img-top" aria-placeholder="Photo de l'événement">
                         <div class="card-body d-flex flex-column">
-                            <a href="events/{{ $event->id }}" class="card-title stretched-link"><h3>{{ $event->title }}</h3></a>
+                            <a href="events/{{ $event->id }}" class="card-title"><h3>{{ $event->title }}</h3></a>
                             <p class="h-25 card-text mb-1 text-wrap overflow-hidden">{{ substr($event->description, 0, 40) }}</p>
                             <p class="text-muted"><small>{{ $event->created_at }}</small></p>
                             <p class="text-danger align-self-center" > {{ $event->recurrent == true ? 'Annuel': 'Ponctuel' }}</p>

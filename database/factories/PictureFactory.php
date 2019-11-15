@@ -7,7 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(Picture::class, function (Faker $faker) {
     return [
-        'image' => $faker->image,
+        'image' => 'skflsdnlsdnvms.jpg',
         'userId' => $faker->randomNumber,
         'eventId' => factory(App\Event::class)
     ];

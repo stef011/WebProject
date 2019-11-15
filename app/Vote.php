@@ -16,20 +16,20 @@ class Vote extends Model
 
     //Methods
 
-    public function upVote(App\User $user, App\Event $event)
+    static function upVote(User $user, Idea $idea)
     {
         $vote = new Vote;
         $vote->user_id = $user->id;
-        $vote->idea_id = $event->id;
+        $vote->idea_id = $idea->id;
         $vote->up = true;
         $vote->save();
     }
 
-    public function downVote(App\User $user, App\Event $event)
+    static function downVote(User $user, Idea $idea)
     {
         $vote = new Vote;
         $vote->user_id = $user->id;
-        $vote->idea_id = $event->id;
+        $vote->idea_id = $idea->id;
         $vote->up = false;
         $vote->save();
     }
