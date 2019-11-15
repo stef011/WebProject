@@ -13,8 +13,21 @@ body {
     padding-top: 20px;
 }
 
+
 /* Other Classes for Page Styling */
 
 .noir {
     background-color: black;
+}
+
+.acceptCookies {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: #000000;
+    color: #808080;
+    height: 20vw;
+    text-align: center;
+    z-index: 99;
+    font-size: 2rem;
 }
