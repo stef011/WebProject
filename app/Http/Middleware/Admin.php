@@ -19,7 +19,7 @@ class Admin
     {
         if(Auth::guest())
         {
-            return redirect(route('login'));
+            return redirect(route('login'))->with('info', 'You need to be connected');
         }
 
         if(Auth::user()->role_id > 1)
