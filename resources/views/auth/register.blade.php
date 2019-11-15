@@ -51,7 +51,7 @@ Inscription BDE Strasbourg
                         </div>
                         <button type="submit" class="btn btn-secondary">Envoyer !</button>
                     </form>
-                    <div class="mt-5 mb-3 mx-3 text-center text-white">Tu as déjà un compte ? Conecte toi <a href="{{route('loginroute')}}">ici</a> !</div>
+                    <div class="mt-5 mb-3 mx-3 text-center text-white">Tu as déjà un compte ? Conecte toi <a href="{{route('login')}}">ici</a> !</div>
                 </div>
             </div>
         </div>
