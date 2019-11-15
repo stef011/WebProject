@@ -39,7 +39,7 @@ Connexion BDE Strasbourg
                         </div>
                         <button type="submit" class="btn btn-secondary">Envoyer !</button>
                     </form>
-                    <div class="mt-5 mb-3 mx-3 text-center text-white">Tu n'as pas encore de compte ? inscrit toi <a href="{{route('registerroute')}}">ici</a> !</div>
+                    <div class="mt-5 mb-3 mx-3 text-center text-white">Tu n'as pas encore de compte ? inscrit toi <a href="{{route('register')}}">ici</a> !</div>
                 </div>
             </div>
         </div>
