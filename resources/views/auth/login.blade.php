@@ -26,19 +26,20 @@ Connexion BDE Strasbourg
                     <form action="{{ url('login') }}" method="POST">
                         @csrf
                         <div class="form-group">
-                            <input type="email" class="form-control  @error('email') is-invalid @enderror" name="emailc" id="emailc" placeholder="E-mail (votre E-mail du CESI)" value="{{ old('emailc') }}">
+                            <input type="email" class="form-control  @error('emailc') is-invalid @enderror" name="emailc" id="emailc" placeholder="E-mail (votre E-mail du CESI)" value="{{ old('emailc') }}">
                             @error('emailc')
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <input class="form-control  @error('mdp') is-invalid @enderror" name="mdp" id="mdp" placeholder="Mot de passe">{{ old('mdp') }}</input>
+                            <input class="form-control  @error('mdpc') is-invalid @enderror" name="mdpc" id="mdpc" placeholder="Mot de passe">{{ old('mdpc') }}</input>
                             @error('mdpc')
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <button type="submit" class="btn btn-secondary">Envoyer !</button>
                     </form>
+                    <div class="mt-5 mb-3 mx-3 text-center text-white">Tu n'as pas encore de compte ? inscrit toi <a href="{{route('registerroute')}}">ici</a> !</div>
                 </div>
             </div>
         </div>
