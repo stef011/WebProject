@@ -30,6 +30,8 @@ Route::get('/ideas', 'IdeaController@index');
 Route::get('/ideas/{id}', 'IdeaController@show');
 
 Route::get('/legal', 'LegalController@index')->name('legal');
+Route::get('/contact', 'ContactController@index')->name('contact');
+Route::get('/conditions', 'ConditionsController@index')->name('conditions');
 
 Route::get('products', 'ProductController@index')->name('product.index');
 

@@ -102,8 +102,12 @@
               <a href="legal" class="text-secondary">Mentions légales</a>
             </li>
             <li>
-              <a href="#!" class="text-secondary">Nous contacter</a>
+              <a href="contact" class="text-secondary">Politique de confidentialité</a>
             </li>
+            <li>
+              <a href="conditions" class="text-secondary">Conditions de vente</a>
+            </li>
+
 
           </ul>
         </div>
