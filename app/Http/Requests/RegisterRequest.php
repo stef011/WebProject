@@ -23,7 +23,7 @@ class RegisterRequest extends FormRequest
     public function rules()
     {
         return [
-            'nom' => 'required|between:5,20|alpha',
+            'nom' => 'required|between:2,20|alpha',
             'prénom' => 'required|between:5,20|alpha',
             'email' => 'required|regex:~[\w\.\w]+[@]+viacesi\.fr~',
             'mdp' => 'required'
