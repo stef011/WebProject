@@ -49,11 +49,21 @@ Inscription BDE Strasbourg
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <button type="submit" class="btn btn-secondary">Envoyer !</button>
-                    </form>
-                    <div class="mt-5 mb-3 mx-3 text-center text-white">Tu as déjà un compte ? Conecte toi <a href="{{route('login')}}">ici</a> !</div>
+                        <select class=form-control>
+                            <option value=1>Strasbourg</option>
+                            <option value=2>Nanterre</option>
+                            <option value=3>Nancy</option>
+                        </select>
                 </div>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <button type="submit" class="btn mt-3 btn-secondary col-md-4">Envoyer !</button>
+                </div>
+                <div class="mt-5 mb-3 mx-3 text-center text-white">Tu as déjà un compte ? Conecte toi <a href="{{route('login')}}">ici</a> !</div>
             </div>
+            </form>
         </div>
     </div>
-    @endsection
+</div>
+</div>
+@endsection

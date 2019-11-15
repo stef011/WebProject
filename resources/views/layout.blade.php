@@ -30,7 +30,6 @@
 </div>
 
 <body class="d-flex flex-column">
-    <header>
         <nav class="navbar navbar-expand-md navbar-dark noir">
             <div class="d-flex">
                 <a class="navbar-brand mr-1" href="/">BDE Strasbourg</a>
@@ -63,39 +62,8 @@
         </nav>
     </header>
 
-
-  <main id="page-content">
-    @yield('body')
-  </main>
-
-
-  <footer id="sticky-footer" class="py-4 text-white-50">
-
-    <div class="container-fluid text-center text-md-left">
-
-
-      <div class="row">
-
-
-        <div class="col-md-6 ">
-
-
-          <h5 class="text-uppercase font-weight-bold">Quelques rappels</h5>
-          <p>Ce site est à la disposition de tous les élèves du CESI, du corps enseignant ainsi que du personnel administratif. Il est impératif que chacun soit respecté et se sente bienvenu sur cette platforme. Tout écart sera sanctionné (de la
-            supression du poste au conseil de discipline)
-          </p>
-
-        </div>
-        <div class="col-md-1 ">
-        </div>
-
-        <div class="col-md-3 ">
-
-
-          <h5 class="text-uppercase font-weight-bold">Liens utiles</h5>
-          <ul>
             <li>
-              <a href="#!" class="text-secondary">Mentions légales</a>
+              <a href="legal" class="text-secondary">Mentions légales</a>
             </li>
             <li>
               <a href="#!" class="text-secondary">Nous contacter</a>
