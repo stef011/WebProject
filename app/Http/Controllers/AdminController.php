@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Event;
 use App\Product;
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\Types\Null_;
 use Symfony\Component\Console\Input\Input;
 
 class AdminController extends Controller
@@ -62,6 +63,26 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+    public function eventCreate()
+    {
+        return view('admin.eventCreate');
+    }
+
+    public function eventSave(Request $request)
+    {
+        $event = new Event();
+        $event->title = $request->title;
+        $event->description = $request->description;
+        $event->recurrent =$request->recurrent;
+        $event->price = $request->price;
+        $event->illustration = 'iamanimage';       
+        $event->scheduled = Null;
+
+        $event->save();
+
+        return redirect()->route('admin.events');
+    }
+
 
     /*_________________________________________________________*/
 
@@ -112,7 +133,7 @@ class AdminController extends Controller
 
         $product->save();
 
-        return redirect()->route('admin.events');
+        return redirect()->route('admin.products');
     }
 
 

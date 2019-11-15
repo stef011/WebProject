@@ -48,9 +48,9 @@ Route::get('admin/events/{evendId}/modify', ['as' => 'modify', 'uses' => 'AdminC
 
 Route::post('admin/events/{eventId}/update', ['as' => 'update', 'uses' => 'AdminController@eventUpdate']);
 
-Route::get('admin/products/create', 'AdminController@productCreate');
+Route::get('admin/events/create', 'AdminController@eventCreate');
 
-Route::post('admin/products/save', 'AdminController@productSave');
+Route::post('admin/events/save', 'AdminController@eventSave');
 
 
 
@@ -61,6 +61,10 @@ Route::get('admin/products/{productId}/delete', ['as' => 'delete', 'uses' => 'Ad
 Route::get('admin/products/{productId}/modify', ['as' => 'modify', 'uses' => 'AdminController@productModify']);
 
 Route::post('admin/products/{productId}/update', ['as' => 'modify', 'uses' => 'AdminController@productUpdate']);
+
+Route::get('admin/products/create', 'AdminController@productCreate');
+
+Route::post('admin/products/save', 'AdminController@productSave');
 
 
 
