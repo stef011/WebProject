@@ -32,7 +32,7 @@ Connexion BDE Strasbourg
                             @enderror
                         </div>
                         <div class="form-group">
-                            <input class="form-control  @error('password') is-invalid @enderror" name="password" id="password" placeholder="Mot de passe">{{ old('password') }}</input>
+                            <input class="form-control  @error('password') is-invalid @enderror" name="password" id="password" placeholder="Mot de passe" type="password">{{ old('password') }}</input>
                             @error('password')
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror

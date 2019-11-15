@@ -25,15 +25,15 @@ Inscription BDE Strasbourg
                 <div class="card-body">
                     <form action="{{ url('register') }}" method="POST">
                         @csrf
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <input type="text" class="form-control  @error('nom') is-invalid @enderror" name="nom" id="nom" placeholder="Nom" value="{{ old('nom') }}">
                             @error('nom')
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
-                        </div>
+                        </div> --}}
                         <div class="form-group">
-                            <input type="text" class="form-control  @error('prenom') is-invalid @enderror" name="prenom" id="prenom" placeholder="Prénom" value="{{ old('prenom') }}">
-                            @error('prenom')
+                            <input type="text" class="form-control  @error('name') is-invalid @enderror" name="name" id="name" placeholder="Prénom" value="{{ old('name') }}">
+                            @error('name')
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
@@ -44,15 +44,22 @@ Inscription BDE Strasbourg
                             @enderror
                         </div>
                         <div class="form-group">
-                            <input class="form-control  @error('mdp') is-invalid @enderror" name="mdp" id="mdp" placeholder="Mot de passe">{{ old('mdp') }}</input>
-                            @error('mdp')
+                            <input class="form-control  @error('password') is-invalid @enderror" name="password" id="password" placeholder="Mot de passe" type="password" required>{{ old('password') }}</input>
+                            @error('password')
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <select class=form-control>
-                            <option value=1>Strasbourg</option>
-                            <option value=2>Nanterre</option>
-                            <option value=3>Nancy</option>
+                        <div class="form-group">
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
+                        <select class=form-control id="location_id" name="location_id">
+                            @foreach (App\Location::all() as $location)
+                            <option value={{ $location->id }}>{{ $location->campus }}</option>
+                            @endforeach
                         </select>
                 </div>
                 <div class="row">
