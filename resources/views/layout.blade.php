@@ -58,7 +58,7 @@
                 <a href="/admin" class="btn btn-light connexion mt-1 text-right" role="button" aria-pressed="true">Admin</a>
             </div>
             @if (Auth::user())
-                {{ Auth::user()->name }}
+                <a href="{{ url('/logout') }}" class="btn btn-light connexion mt-1 text-right" role="button" aria-pressed="true"> Déconnexion</a>
                 @else
                 <div>
                     <a href="/login" class="btn btn-light connexion mt-1 text-right" role="button" aria-pressed="true">Connexion</a>
