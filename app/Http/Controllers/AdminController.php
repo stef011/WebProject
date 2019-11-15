@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Event;
+use App\Product;
 use Illuminate\Http\Request;
 use Symfony\Component\Console\Input\Input;
 
@@ -32,7 +33,7 @@ class AdminController extends Controller
     public function eventModify($eventId)
     {
         $event = Event::find($eventId);
-        return view('admin.modify', compact('event', $event));
+        return view('admin.eventModify', compact('event', $event));
         
     }
 
@@ -58,6 +59,39 @@ class AdminController extends Controller
     {
         //if user can
         Event::where('id', $eventId)->delete();
+        return redirect()->back();
+    }
+
+
+    /*_________________________________________________________*/
+
+    public function productModify($productId)
+    {
+        $product = Product::find($productId);
+        return view('admin.productModify', compact('product', $product));
+    }
+
+    public function productUpdate($productId)
+    {
+        $title = request('title');
+        $description = request('description');
+        $price = request('price');
+        $stock = request('stock');
+        $created_at = request('created_at');
+        Product::where('id', $productId)
+            ->update([
+                'title' => $title,
+                'description' => $description,
+                'price' => $price,
+                'stock' => $stock,
+                'created_at' => $created_at
+            ]);
+        return redirect()->route('admin.products')->with('info', 'Product has been updated');
+    }
+
+    public function productDelete($productId)
+    {
+        Product::where('id', $productId)->delete();
         return redirect()->back();
     }
 
