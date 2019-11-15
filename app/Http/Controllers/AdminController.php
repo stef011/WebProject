@@ -95,5 +95,25 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+    
+    public function productCreate()
+    {
+        return view('admin.productCreate');
+    }
+
+    public function productSave(Request $request)
+    {
+        $product = new Product();
+        $product->title = $request->title;
+        $product->description = $request->description;
+        $product->image = 'iamanimage';
+        $product->price = $request->price;
+        $product->stock = $request->stock;
+
+        $product->save();
+
+        return redirect()->route('admin.events');
+    }
+
 
 }

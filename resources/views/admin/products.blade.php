@@ -14,6 +14,8 @@
                 <th style="border: 1px solid #333">price</th>
                 <th style="border: 1px solid #333">stock</th>
                 <th style="border: 1px solid #333">created_at</th>
+                <th><a href="{{action('AdminController@productCreate')}}" class="btn btn-dark" role="button">+</a></th>
+            </tr>
             </tr>
         </thead>
         <tbody>

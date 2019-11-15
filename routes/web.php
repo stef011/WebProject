@@ -48,6 +48,10 @@ Route::get('admin/events/{evendId}/modify', ['as' => 'modify', 'uses' => 'AdminC
 
 Route::post('admin/events/{eventId}/update', ['as' => 'update', 'uses' => 'AdminController@eventUpdate']);
 
+Route::get('admin/products/create', 'AdminController@productCreate');
+
+Route::post('admin/products/save', 'AdminController@productSave');
+
 
 
 Route::get('admin/products', 'AdminController@showProducts')->name('admin.products');

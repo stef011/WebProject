@@ -15,6 +15,9 @@
             {{ session('info') }}
         </div>
     @endif
+
+    
+
     <table>
         <thead>
             <tr>
@@ -23,7 +26,6 @@
                 <th style="border: 1px solid #333">recurrent</th>
                 <th style="border: 1px solid #333">price</th>
                 <th style="border: 1px solid #333">created_at</th>
-            </tr>
         </thead>
         <tbody>
             @foreach($events as $event)
