@@ -68,17 +68,7 @@ Route::post('admin/products/save', 'AdminController@productSave');
 
 
 
-//Auth routes
-Route::post('login', 'LoginController@store');
-Route::get('login', 'LoginController@create');
-Route::post('register', 'RegisterController@store');
-Route::get('register', 'RegisterController@create');
-Route::get('/login', function () {
-    return view('auth/login');
-})->name('login');
-Route::get('/register', function () {
-    return view('auth/register');
-})->name('register');
-Route::get('/logout', function () {
-    Auth::logout();
-});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
