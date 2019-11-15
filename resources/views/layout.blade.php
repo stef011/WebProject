@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
 
   {{-- Meta --}}
@@ -85,14 +84,17 @@
         <div class="col-md-3 ">
 
 
-          <h5 class="text-uppercase font-weight-bold">Liens utiles</h5>
-          <li>
-            <a href="#!">Mentions légales</a>
-          </li>
-          <li>
-            <a href="#!">Nous contacter</a>
-          </li>
-        </div>
+        <h5 class="text-uppercase font-weight-bold">Liens utiles</h5>
+        <ul>
+        <li>
+          <a href="#!" class="text-secondary">Mentions légales</a>
+        </li>
+        <li>
+          <a href="#!" class="text-secondary">Nous contacter</a>
+        </li>
+
+        </ul>
+      </div>
         <div class="col-md-2 ">
           <i class="fab fa-facebook fa-3x"></i>
           <i class="fab fa-instagram fa-3x"></i>

@@ -10,7 +10,7 @@ class EventController extends Controller
 
     public function index()
     {
-        $numPerPage = request('perPage', 5);
+        $numPerPage = request('perPage', 6);
         $events = Event::latest()->paginate($numPerPage);
 
         return view('event.index', ['events' => $events]);
@@ -19,6 +19,10 @@ class EventController extends Controller
     public function show($eventId)
     {
         $event = Event::find($eventId);
+
+        if (!$event) {
+            abort(404, 'Event not found');
+        }
 
         return view('event.show', ['event' => $event]);
     }
