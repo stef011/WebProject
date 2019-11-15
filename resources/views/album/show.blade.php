@@ -26,7 +26,7 @@
                 <img src="{{ asset('storage/images/' . $picture->image) }}" class="d-block w-100" alt="Photo {{ $picture->first()->event->title }}">
                 <div class="carousel-caption d-none d-md-block">
 
-                  //TODO: Link the view with username
+                  {{-- //TODO: Link the view with username --}}
                     <h5>{{ $picture->userId  }}</h5>
                     <p>Photo de l'événement {{ $picture->first()->event->title }}</p>
                 </div>
