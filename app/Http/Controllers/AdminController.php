@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Event;
 use Illuminate\Http\Request;
+use Symfony\Component\Console\Input\Input;
 
 class AdminController extends Controller
 {
@@ -37,7 +38,19 @@ class AdminController extends Controller
 
     public function eventUpdate(Request $request, $eventId)
     {
-        Event::where('id', $eventId)->update($request->all());
+        $title = request('title');
+        $description = request('description');
+        $recurrent = request('recurrent');
+        $price = request('price');
+        $created_at = request('created_at');
+        Event::where('id', $eventId)
+            ->update([
+                'title' => $title,
+                'description' => $description,
+                'recurrent' => $recurrent,
+                'price' => $price,
+                'created_at' => $created_at
+            ]);
         return redirect()->route('admin.events')->with('info', 'Event has been updated');
     }
 
