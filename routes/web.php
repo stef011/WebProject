@@ -39,31 +39,31 @@ Route::get('test', 'TestController@test');
 Route::get('admin', 'AdminController@index')->middleware('admin');
 
 
-Route::get('admin/events', 'AdminController@showEvents')->name('admin.events');
+Route::get('admin/events', 'AdminController@showEvents')->name('admin.events')->middleware('admin');
 
-Route::get('admin/events/{eventId}/delete', ['as' => 'delete', 'uses' => 'AdminController@eventDelete']);
+Route::get('admin/events/{eventId}/delete', ['as' => 'delete', 'uses' => 'AdminController@eventDelete'])->middleware('admin');
 
-Route::get('admin/events/{evendId}/modify', ['as' => 'modify', 'uses' => 'AdminController@eventModify']);
+Route::get('admin/events/{evendId}/modify', ['as' => 'modify', 'uses' => 'AdminController@eventModify'])->middleware('admin');
 
-Route::post('admin/events/{eventId}/update', ['as' => 'update', 'uses' => 'AdminController@eventUpdate']);
+Route::post('admin/events/{eventId}/update', ['as' => 'update', 'uses' => 'AdminController@eventUpdate'])->middleware('admin');
 
-Route::get('admin/events/create', 'AdminController@eventCreate');
+Route::get('admin/events/create', 'AdminController@eventCreate')->middleware('admin');
 
-Route::post('admin/events/save', 'AdminController@eventSave');
+Route::post('admin/events/save', 'AdminController@eventSave')->middleware('admin');
 
 
 
-Route::get('admin/products', 'AdminController@showProducts')->name('admin.products');
+Route::get('admin/products', 'AdminController@showProducts')->name('admin.products')->middleware('admin');
 
-Route::get('admin/products/{productId}/delete', ['as' => 'delete', 'uses' => 'AdminController@productDelete']);
+Route::get('admin/products/{productId}/delete', ['as' => 'delete', 'uses' => 'AdminController@productDelete'])->middleware('admin');
 
-Route::get('admin/products/{productId}/modify', ['as' => 'modify', 'uses' => 'AdminController@productModify']);
+Route::get('admin/products/{productId}/modify', ['as' => 'modify', 'uses' => 'AdminController@productModify'])->middleware('admin');
 
-Route::post('admin/products/{productId}/update', ['as' => 'modify', 'uses' => 'AdminController@productUpdate']);
+Route::post('admin/products/{productId}/update', ['as' => 'modify', 'uses' => 'AdminController@productUpdate'])->middleware('admin');
 
-Route::get('admin/products/create', 'AdminController@productCreate');
+Route::get('admin/products/create', 'AdminController@productCreate')->middleware('admin');
 
-Route::post('admin/products/save', 'AdminController@productSave');
+Route::post('admin/products/save', 'AdminController@productSave')->middleware('admin');
 
 
 
