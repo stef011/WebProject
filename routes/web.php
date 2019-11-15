@@ -35,6 +35,8 @@ Route::get('/conditions', 'ConditionsController@index')->name('conditions');
 
 Route::get('products', 'ProductController@index')->name('product.index');
 
+Route::get('product/{productId}/show', ['as' => 'show', 'uses' => 'ProductController@show']);
+
 Route::get('test', 'TestController@test');
 
 

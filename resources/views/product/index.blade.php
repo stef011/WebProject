@@ -58,8 +58,8 @@
                     <option value={{ $product->id }}>{{ $product->cathegory}}</option>
                     <h5 class="card-title">{{$product->title}}</h5>
                     <p class="card-text">{{$product->description}}</p>
-                    <a href="#" class="btn btn-primary">{{$product->price}}</a>
-                </div>
+                    <a href="{{action('ProductController@show', [$product->id, 'show'])}}" class="btn btn-primary">{{$product->price}}</a>
+                </div>/product/{{$product->price}}/
             </div>
         </div>
         @endforeach
