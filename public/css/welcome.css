@@ -1,0 +1,42 @@
+        .window {
+            min-height: 600px;
+            background: #E1E1E0 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+        
+        .wlcmess {
+            margin-top: 150px;
+            margin-bottom: 100px;
+            font-family: Impact;
+            font-size: 60px;
+            text-align: center;
+        }
+        
+        .services {
+            min-height: 400px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            opacity: 1;
+        }
+        
+        .wlcfont {
+            margin-top: 150px;
+            margin-bottom: 100px;
+            font-family: Impact;
+            font-size: 30px;
+            text-align: center;
+        }
+        
+        .img1 {
+            background: transparent url('img/Rectangle 4.png') 0% 0% no-repeat padding-box;
+            border: 1px solid #00000000;
+            opacity: 1;
+        }
+        
+        .mt20 {
+            margin-top: 20px;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
